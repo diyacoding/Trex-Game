@@ -124,9 +124,7 @@ function draw(){
     else if(gameState === END){
         // making ground stop
         ground.velocityX = 0
-        if(mousePressedOver(restart)){
-            reset();
-      }
+
         obstaclesGroup.setVelocityXEach(0)
         cloudsGroup.setVelocityXEach(0)
         trex.changeAnimation("collided",trex_collided)
@@ -135,6 +133,9 @@ function draw(){
         trex.velocityY = 0
         gameOver.visible = true
         restart.visible = true
+              if(mousePressedOver(restart)){
+            reset();
+      }
     }
   //  var ran = Math.round(random(1,10))
    // console.log(ran);
